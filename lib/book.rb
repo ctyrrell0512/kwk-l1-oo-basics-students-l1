@@ -2,7 +2,7 @@
 # Add you Book class here
 
 class Book
-  def initialize(title)
+  def initialize(title, author, page_count, genre)
     @title = title
   end
   
@@ -26,6 +26,10 @@ class Book
      @page_count
    end
    
+   def genre=(genre)
+     @genre = genre
+   end
+   
    def genre
      @genre
    end
@@ -35,5 +39,5 @@ class Book
    end
 end
 
-book = Book.new("Some Title")
+book = Book.new("And Then There Were None", "Agatha Christie", 272, "Mystery")
 book.turn_page
